@@ -1,6 +1,15 @@
 import 'package:flutter/services.dart';
 
-enum InstallStatus { pending, downloading, downloaded, installing, installed, failed, canceled, unknown }
+enum InstallStatus {
+  pending,
+  downloading,
+  downloaded,
+  installing,
+  installed,
+  failed,
+  canceled,
+  unknown,
+}
 
 class UpdateCheckResult {
   const UpdateCheckResult({
@@ -27,7 +36,9 @@ class NativeUpdateService {
   Stream<Map<String, dynamic>>? _installStateStream;
 
   Future<UpdateCheckResult> checkForUpdate() async {
-    final map = await _methodChannel.invokeMapMethod<String, dynamic>('checkForUpdate');
+    final map = await _methodChannel.invokeMapMethod<String, dynamic>(
+      'checkForUpdate',
+    );
     if (map == null) return const UpdateCheckResult(updateAvailable: false);
     return UpdateCheckResult(
       updateAvailable: map['updateAvailable'] as bool? ?? false,
@@ -40,12 +51,14 @@ class NativeUpdateService {
 
   /// Android only: full-screen blocking update flow.
   Future<bool> startImmediateUpdate() async {
-    return await _methodChannel.invokeMethod<bool>('startImmediateUpdate') ?? false;
+    return await _methodChannel.invokeMethod<bool>('startImmediateUpdate') ??
+        false;
   }
 
   /// Android only: background download; call [completeFlexibleUpdate] once downloaded.
   Future<bool> startFlexibleUpdate() async {
-    return await _methodChannel.invokeMethod<bool>('startFlexibleUpdate') ?? false;
+    return await _methodChannel.invokeMethod<bool>('startFlexibleUpdate') ??
+        false;
   }
 
   Future<void> completeFlexibleUpdate() {
@@ -59,9 +72,9 @@ class NativeUpdateService {
 
   /// Android only: emits Play Core install state while a flexible update downloads.
   Stream<Map<String, dynamic>> installStateStream() {
-    _installStateStream ??= _eventChannel
-        .receiveBroadcastStream()
-        .map((event) => Map<String, dynamic>.from(event as Map));
+    _installStateStream ??= _eventChannel.receiveBroadcastStream().map(
+      (event) => Map<String, dynamic>.from(event as Map),
+    );
     return _installStateStream!;
   }
 

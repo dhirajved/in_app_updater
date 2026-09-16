@@ -68,6 +68,12 @@ class InAppUpdaterPlugin :
     override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
         activity = binding.activity
         binding.addActivityResultListener(this)
+        // detachActivity() (called on rotation/config change) unregisters this listener;
+        // re-register it so a Dart-side EventChannel subscription started before the
+        // config change keeps receiving install state updates afterwards.
+        if (eventSink != null) {
+            appUpdateManager?.registerListener(installStateListener)
+        }
     }
 
     override fun onDetachedFromActivityForConfigChanges() = detachActivity()

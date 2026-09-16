@@ -1,5 +1,5 @@
 name: in_app_updater
-description: "A new Flutter plugin project."
+description: "Prompt users to update via Google Play's In-App Update API on Android and an App Store lookup + StoreKit sheet on iOS."
 version: 0.0.1
 homepage:
 
