@@ -5,13 +5,14 @@
 Pod::Spec.new do |s|
   s.name             = 'in_app_updater'
   s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
+  s.summary          = "Prompt users to update via Google Play's In-App Update API on Android and an App Store lookup + StoreKit sheet on iOS."
   s.description      = <<-DESC
-A new Flutter plugin project.
+Prompt users to update via Google Play's In-App Update API on Android and an
+App Store lookup + StoreKit sheet on iOS.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/dhirajved/in_app_updater'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Dhiraj Ved' => 'rathoddhiraj8000@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'in_app_updater/Sources/in_app_updater/**/*'
   s.dependency 'Flutter'
