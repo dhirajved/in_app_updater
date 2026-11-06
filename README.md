@@ -14,15 +14,16 @@ It ships two layers you can use independently:
 | `NativeUpdateService` | Low-level method-channel API if you want to build fully custom UI/flow. |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/chiragrapidops2/in_app_updater/master/screenshots/in-app-update-demo.gif" alt="in_app_updater demo" width="300"/>
+  <img src="screenshots/in-app-update-demo.gif" alt="in_app_updater demo" width="300"/>
 </p>
 
 ## Demo
 
 | Android — Immediate update | Android — Flexible update | iOS — App Store update |
 |:---:|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/chiragrapidops2/in_app_updater/master/screenshots/android-immediate-update.gif" alt="Android immediate update" width="250"/> | <img src="https://raw.githubusercontent.com/chiragrapidops2/in_app_updater/master/screenshots/android-flexible-update.gif" alt="Android flexible update" width="250"/> | <img src="https://raw.githubusercontent.com/chiragrapidops2/in_app_updater/master/screenshots/ios-update.gif" alt="iOS update" width="250"/> |
+| <img src="screenshots/android-immediate-update.gif" alt="Android immediate update" width="250"/> | <img src="screenshots/android-flexible-update.gif" alt="Android flexible update" width="250"/> | <img src="screenshots/ios-update.gif" alt="iOS update" width="250"/> |
 | Full-screen, blocking Play Store update flow. | Background download, then a **RESTART** snackbar to install. | Opens the App Store listing in a StoreKit sheet. |
+
 
 ## Table of contents
 
