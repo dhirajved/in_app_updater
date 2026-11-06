@@ -13,9 +13,6 @@ It ships two layers you can use independently:
 | `UpdateChecker` widget | Drop-in, "just works" UI: wraps your home screen, checks for an update on launch, and shows a platform-appropriate dialog automatically. |
 | `NativeUpdateService` | Low-level method-channel API if you want to build fully custom UI/flow. |
 
-<p align="center">
-  <img src="screenshots/in-app-update-demo.gif" alt="in_app_updater demo" width="300"/>
-</p>
 
 ## Demo
 
