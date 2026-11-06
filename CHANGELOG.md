@@ -1,6 +1,4 @@
-## 0.0.1
+## 0.0.2
 
-* Initial release.
-* Android: Play Core In-App Update API (immediate + flexible flows, install state stream).
-* iOS: App Store version lookup + StoreKit update sheet.
-* `UpdateChecker` widget with customizable dialog/snackbar builders.
+* Added previews.
+* Fixed bugs.
